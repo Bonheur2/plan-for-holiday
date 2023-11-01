@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .background-image  img{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+  }
+  .name-indian {
+    width: 20%;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    transform: translateY(150px);
+    margin-left: 30rem;
+    font-weight: bold;
+  }
+  .detail-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 40%;
+    justify-content: center;
+    border: 2px solid #ccc;
+    padding: 2px;
+    margin-top: 1rem;
+    margin-left: 6rem;
+    border-radius: 5px;
+  }
+  
+  .info-button {
+    color: #000;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+  
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .info-button:hover {
+    background-color: #c29d59;
+    color: #fff;
+  }
+  
+  .vertical-line {
+    border-left: 3px solid #ccc;
+    height: 40px;
+    margin: 0 5px; 
+  }
+  
+  .para23 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    /* padding: 10px 20px; */
+    margin-left: 2rem;
+    margin-top: 10px;
+  }
+  
+  .para23 h1 {
+    font-size: 17px;
+    padding: 20px;
+    color: #2b2b2b;
+    font-weight: 400;
+  }
+  
+  .circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #c29d59;
+    color: #000;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #c29d59;
+    transform: translateX(200px);
+    margin-bottom: 20px;
+  }
+  .tour-area1 {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+  }
+  .circle p {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .circle p:last-child {
+    margin-top: 10px;
+  }
+  
+  .side-form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 57rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 3px;
+    width: 24%;
+    margin-top: -2rem;
+    transform: translateY(-80px);
+  }
+  .title-2 {
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    margin-left: -3.5rem;
+  }
+  .title-2::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 3px;
+    height: 120%;
+    background-color: #c29d59;
+  }
+  .search-tour1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .tour-detailed {
+    padding-left: 2.9rem;
+  
+    background-color: #fff;
+    width: 65%;
+    margin-left: 3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-17rem);
+    margin-top: -40rem;
+  }
+  .tour-mission2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 57rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 10px;
+  
+    transform: translateY(-60px);
+    width: 24%;
+  }
+  
+  .tour-mission2 p {
+    color: #999;
+    padding: 10px;
+  }
+  .tour-mission2 h1 {
+    font-size: 19px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .tour-mission2 h1::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    width: 3px;
+    height: 20%;
+    background-color: #c29d59;
+    margin-left: -0.1rem;
+  }
+  
+  .tour-mission3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 57rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #c29d59;
+    padding: 18px;
+    transform: translateY(-40px);
+    width: 24%;
+    height: 50vh;
+  }
+  
+  .tour-mission3 h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateY(-10px);
+    margin-left: 1.4rem;
+  }
+  
+  .tour-mission3 p {
+    color: #f6f6f6;
+    padding: 10px;
+    padding-top: 23px;
+    margin-left: 1.1rem;
+  }
+  
+  .circle::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+    background-color: #fff;
+  
+    transform: translateY(23px);
+  }
+  
+  .circle p {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  .circle p:last-child {
+    margin-top: 10px;
+  }
+  .planned-trip {
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: #c29d59;
+    color: #2b2b2b;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+  }
+  
+  .planned-trip p {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .trip-description {
+    padding: 10px;
+    width: 50%;
+    margin-left: 3rem;
+    margin-top: 1.4rem;
+  }
+  .trip-description p {
+    font-size: 12px;
+    color: #2b2b2b;
+  }
+  
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    margin-left: 3rem;
+    border-left: 1px solid #ccc;
+    transform: translateY(-20px);
+  }
+  
+  thead {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+  }
+  
+  thead th {
+    padding: 24px;
+    text-align: left;
+    border-right: 1px solid #ccc;
+  }
+  
+  tbody td {
+    padding: 24px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  
+  tbody td:first-child {
+    font-weight: bold;
+  }
+  
+  /* Centering text in the columns */
+  td:nth-child(3),
+  td:nth-child(4) {
+    text-align: center;
+  }

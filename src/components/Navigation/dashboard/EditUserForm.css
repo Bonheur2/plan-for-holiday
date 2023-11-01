@@ -1,0 +1,43 @@
+/* EditUserForm.css */
+
+.edit-container label {
+    padding: 10px;
+    font-weight: bold;
+   }
+   
+   .edit-container form input {
+     width: 25%;
+     padding: 8px;
+     background: none;
+     color: #000000;
+     outline: none;
+     font-size: 15px;
+     border-radius: 8px;
+     border: 1px solid grey;
+   }
+   .my-button
+   {
+     display: flex;
+     flex-direction: row;
+   }
+   .save{
+     margin-top: 10px;
+     background-color: green; 
+     color: white;
+     padding: 10px 20px;
+     margin-bottom: 10px;
+     width: 5rem;
+     align-items: center;
+     border-radius: 10px;
+   }
+   
+   .cancel {
+     background-color: #ff1100; 
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     width: 5rem;   
+     border-radius: 10px;
+     align-items: center; 
+     margin-bottom: 10px;
+   }

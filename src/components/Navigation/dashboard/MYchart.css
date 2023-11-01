@@ -1,0 +1,38 @@
+.dashcontent {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+.contentsd
+{
+    width: 20%;
+    height: 12vh;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+.dashicon
+{
+    color: rgb(245, 245, 245);
+    font-size: 20px;
+    margin-right:10px ;
+}
+.bbooking
+{
+    background-color: aqua;
+}
+.mmessage
+{
+    background-color: blueviolet;
+}
+.uuser
+{
+    background-color: coral;
+}
+.ttour
+{
+    background-color: darkgreen;
+}

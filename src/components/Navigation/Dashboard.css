@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dashboard-container {
+  display: flex;
+}
+.sliderbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  flex-basis: 20%;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #000000;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: #eaeaea;
+  /* box-shadow: 0px 30px 8px 2px #000000; */
+}
+
+.logo {
+  height: 80px;
+  padding: relative;
+}
+.main {
+  height: 95%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+.main li {
+  padding: 1rem;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+.main li:hover,
+.active {
+  background-color: #ffffff58;
+}
+.main a {
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+.main a span {
+  overflow: hidden;
+}
+.main a i {
+  font-size: 1.2rem;
+}
+.logout {
+  position: fixed;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.maincontent {
+  position: relative;
+  background: rgb(243, 246, 247);
+  padding: 1rem;
+  flex-basis: 80%;
+}
+
+.headerwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #dfe0e0;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+.headertitle span {
+  color: rgb(0, 0, 0);
+}
+.myphoto div {
+  display: flex;
+  gap: 1rem;
+}
+.myphoto img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgb(115, 78, 51);
+  margin-bottom: 30px;
+}
+.myphoto nav span {
+  font-weight: bold;
+}
+.toggle {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .sliderbar {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .main li {
+    flex-basis: 50%;
+    padding: 1rem;
+  }
+}

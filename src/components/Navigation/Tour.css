@@ -1,0 +1,240 @@
+.tour {
+    background-image: url(/images/travel4.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    align-items: center;
+    z-index: 8888;
+    height: 100vh;
+    color: white;
+  }
+  .tour p {
+    font-size: 4rem;
+    padding-top: 20%;
+    padding-left: 40%;
+    display: flex;
+    align-items: center;
+  }
+  .tourists {
+    display: flex;
+    gap: 90px;
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+  .touristsse {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  .card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  .RWANDA {
+    margin-left: 20px;
+    background-color: #c29d59;
+    transform: translateY(-20px);
+  }
+  .RWANDA:hover {
+    background-color: none;
+  }
+  .card-body {
+    border-left: 5px solid #c29d59;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 16px;
+  }
+  h2 {
+    font-size: 18px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  p {
+    font-size: 16px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .duration {
+    display: flex;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    gap: 20%;
+  }
+  .duration b {
+    font-size: 15px;
+  }
+  .find-buttonn {
+    background-color: #c29d59;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 16px;
+    cursor: pointer;
+    color: #fff;
+  }
+  .find-buttonn:hover {
+    background-color: #000;
+  }
+  .durationn {
+    display: flex;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    gap: 20%;
+  }
+  .durationn p {
+    margin-top: 10%;
+  }
+  .filterinput {
+    width: 86%;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #4d4c4c;
+  }
+  .filterselect {
+    border: none;
+    width: 98%;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #4d4c4c;
+  }
+  .card2 {
+    border: 1px solid #ccc;
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 5px 5px 10px;
+    width: 300px;
+  }
+  .card2 p {
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 4px solid #c29d59;
+  }
+  .findbutton {
+    background-color: #c29d59;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 16px;
+    cursor: pointer;
+    color: #fff;
+  }
+  .findbutton:hover {
+    background-color: #000;
+  }
+  .sects {
+    margin-left: 17px;
+    text-decoration: none;
+    list-style: square;
+  }
+  .sects a {
+    text-decoration: none;
+    color: #555252;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 18px;
+  }
+  .sects ul {
+    list-style: square;
+  }
+  .number {
+    display: flex;
+    gap: 10%;
+  }
+  .number-1 {
+    padding: 15px;
+    width: 33%;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .TOURLIST {
+    box-shadow: 5px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+    width: 300px;
+    gap: 10px;
+    background-color: #f6f6f6;
+    height: 150px;
+  }
+  .TOURLIST b {
+    font-size: 18px;
+    padding-left: 3px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    border-left: 3px solid #c29d59;
+  }
+  .TOURLIST1 {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #989090;
+    height: 20%;
+  }
+  .TOURLIST2 {
+    display: flex;
+    gap: 20px;
+    height: 250px;
+    width: 300px;
+    padding: 7%;
+    box-shadow: 5px 5px 10px;
+    background-image: url(/images/photo.jpeg);
+    flex-direction: column;
+  }
+  .TOURLIST2-1 {
+    display: grid;
+    color: aliceblue;
+    grid-gap: 20px;
+  }
+  .TOURLIST2 b {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: aliceblue;
+    font-size: 20px;
+    padding-left: 3px;
+    border-left: 3px solid black;
+  }
+  .TOURLIST2 p {
+    color: aliceblue;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .tourists22 {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+
+
+  /* responsiveness */
+
+  @media (max-width:768px) {
+    .alltout-container
+    {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .tourists
+    {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .card
+    {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .tour p{
+      display: flex;
+      margin: none;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    
+  }

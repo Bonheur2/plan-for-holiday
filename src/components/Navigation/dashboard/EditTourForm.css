@@ -1,0 +1,51 @@
+.edittourcontainer {
+width: 98%;
+height: 100vh;
+position: fixed;
+inset: 0;
+z-index: 10;
+align-items: center;
+background-color: rgba(52, 54, 53, 0.9);
+}
+.edittourcontent
+{
+   width: 50%;
+   align-items: center;
+   background-color: white;
+   margin: 10px 25%;
+   height: 95vh;
+   border: 2px solid black;
+   padding: 10px 5px;
+}
+.edittourd
+{
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+}
+.edittourd input
+{
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 5px;
+}
+.edittourd label{
+    padding: 8px;
+}
+.edittourb
+{
+    display: flex;
+    gap: 50px;
+}
+.edittoursave
+{
+background-color: #c29d59;
+padding: 10px 20px;
+border-radius: 5px;
+}
+.edittouredit
+{
+background-color: rgb(102, 102, 130);
+padding: 10px 20px;
+border-radius: 5px;
+}
