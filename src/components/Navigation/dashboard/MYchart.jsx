@@ -10,6 +10,7 @@ function MYchart() {
   const { fetchUsersData } = useContext(AuthContext);
   const { myTours } = useContext(AuthContext);
   const { fetchContact } = useContext(AuthContext);
+  const { fetchBook } = useContext(AuthContext);
 
 
 
@@ -47,6 +48,8 @@ function MYchart() {
           </div>
           <div className="contentsd bbooking">
             <FaChartBar className='dashicon' />
+            {fetchBook?.length}
+            {" "}
             Booking
 
           </div>

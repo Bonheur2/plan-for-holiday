@@ -28,42 +28,33 @@ function EditTourForm({ handleEditClick, item }) {
         <div className="edittourcontainer">
             <div className="edittourcontent">
                 <form method="get" onSubmit={handleUpdate}>
-                    <div className="edittourd">
                         <label for="Image">Image:</label>
                         <input type="file" name="Image" />
-                    </div>
-                    <div className="edittourd">
+                    
                         <label>Country:</label>
                         <input
                             type="text"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                         />
-                    </div>
-                    <div className="edittourd">
                         <label>Description:</label>
                         <input
                             type="text"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         />
-                    </div>
-                    <div className="edittourd">
                         <label>Group Size:</label>
                         <input
                             type="number"
                             value={groupsize}
                             onChange={(e) => setGroupSize(e.target.value)}
                         />
-                    </div>
-                    <div className="edittourd">
                         <label>Duration:</label>
                         <input
                             type="text"
                             value={duration}
                             onChange={(e) => setDuration(e.target.value)}
                         />
-                    </div>
                     <div className="edittourb">
                         <button type="submit"
                             className="edittoursave"

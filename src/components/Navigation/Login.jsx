@@ -7,6 +7,15 @@ import user from "/images/login-user.jpg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Notiflix from "notiflix";
+
+
+
+Notiflix.Notify.init({
+  position: "righf-top",
+  timeout: 3000,
+  cssAnimation: true,
+})
 
 function Login() {
 
@@ -15,6 +24,27 @@ function Login() {
   const formdata = { email, password }
 
   const navigate = useNavigate();
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await axios.post(
+  //       "https://holiday-planner-4lnj.onrender.com/api/v1/auth/login",
+  //       formdata
+  //     );
+  //     localStorage.setItem('data', JSON.stringify(res.data))
+  //     if (res.data.user.role === "admin") {
+  //       alert("Admin login successfull");
+  //       navigate("/dashboard/barchart");
+  //     }
+  //     else {
+  //       alert("User login successfull");
+  //       navigate("/");
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -22,19 +52,20 @@ function Login() {
         "https://holiday-planner-4lnj.onrender.com/api/v1/auth/login",
         formdata
       );
-      localStorage.setItem('data', JSON.stringify(res.data))
+      localStorage.setItem('data', JSON.stringify(res.data));
       if (res.data.user.role === "admin") {
-        alert("Admin login successfull");
+        Notiflix.Notify.success("Admin login successful!");
         navigate("/dashboard/barchart");
-      }
-      else {
-        alert("User login successfull");
+      } else {
+        Notiflix.Notify.success("User login successful!");
         navigate("/");
       }
     } catch (error) {
       console.log(error);
+      Notiflix.Notify.failure("Login failed. Please try again.");
     }
   };
+  
 
   return (
     <div className="login-container">

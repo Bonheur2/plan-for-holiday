@@ -2,6 +2,16 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import "./TourModal.css"
+import Notiflix from "notiflix";
+
+
+
+Notiflix.Notify.init({
+  position: "righf-top",
+  timeout: 3000,
+  cssAnimation: true,
+})
+
 function TourModal() {
   const onSubmit = async (tour) => {
     const formData = new FormData();
@@ -25,7 +35,9 @@ function TourModal() {
         }
       );
       if (res.data) {
+        
         console.log("Tour created", res.data);
+        Notiflix.Notify.success("Tour created successful!");
         window.location.reload()
       }
     } catch (error) {

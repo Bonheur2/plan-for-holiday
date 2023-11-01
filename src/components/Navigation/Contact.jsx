@@ -6,6 +6,18 @@ import "./Contact.css"
 import { useState } from "react";
 import axios from "axios";
 import contactimage from "/images/travel7.jpg";
+
+import Notiflix from "notiflix";
+
+
+
+Notiflix.Notify.init({
+  position: "righf-top",
+  timeout: 3000,
+  cssAnimation: true,
+})
+
+
 function Contact() {
   const [name, setFullName] = useState("")
   const [email, setEmail] = useState("")
@@ -22,7 +34,9 @@ function Contact() {
         "https://holiday-planner-4lnj.onrender.com/api/v1/contact/submit",
         contactdata,
       );
-      alert("Contact submission successful")
+      // alert("Contact submission successful"/
+      Notiflix.Notify.success("Contact submission successful!");
+
       console.log(contactdata);
     } catch (error) {
       console.log(error);

@@ -23,7 +23,7 @@ function Booking() {
                 <td>{item.tourID}</td>
                 <td>{item.userID}</td>
                 <td>{item.isPaid}</td>
-                <td>{item.paymentMethod	}</td>
+                <td>{item.paymentMethod}</td>
               </tr>
             ))}
           </tbody>

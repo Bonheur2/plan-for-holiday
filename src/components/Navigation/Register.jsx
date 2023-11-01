@@ -6,6 +6,15 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+import Notiflix from "notiflix";
+
+
+
+Notiflix.Notify.init({
+  position: "righf-top",
+  timeout: 3000,
+  cssAnimation: true,
+})
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +32,9 @@ function Register() {
     e.preventDefault();
 
   if (password !== confirmPassword) {
-    alert("Passwords do not match");
+    // alert("Passwords do not match");
+    Notiflix.Notify.failure("Password not match!");
+
     return;
   }
 
