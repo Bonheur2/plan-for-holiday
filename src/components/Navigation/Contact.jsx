@@ -34,8 +34,9 @@ function Contact() {
         "https://holiday-planner-4lnj.onrender.com/api/v1/contact/submit",
         contactdata,
       );
-      // alert("Contact submission successful"/
-      Notiflix.Notify.success("Contact submission successful!");
+      // alert("Contact submission successful")
+      Notiflix.Notify.success("Contact submission successfulL!");
+      // window.location.reload()
 
       console.log(contactdata);
     } catch (error) {

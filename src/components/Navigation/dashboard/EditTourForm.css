@@ -1,7 +1,10 @@
 .edittourcontainer {
     width: 100%;
     height: 100vh;
-    position: fixed;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
     inset: 0;
     z-index: 10;
     background-color: rgba(52, 54, 53, 0.9);
@@ -11,9 +14,10 @@
     display: flex;
     width: 50%;
     align-items: center;
+    justify-content: center;
     background-color: white;
     height: 95vh;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 10px 5px;
 }
 

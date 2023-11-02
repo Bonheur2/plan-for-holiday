@@ -43,7 +43,7 @@ const AppProvider = ({ children }) => {
       return response.data;
     },
     onSuccess: (data) => {
-      console.log("fetched all conatact", response.data);
+      console.log("fetched all conatact", response?.data);
     },
   });
 
@@ -76,15 +76,15 @@ const AppProvider = ({ children }) => {
 const { data: fetchUsersData } = useQuery({
   queryKey: ["users"],
   queryFn: async () => {
-    const response = await axios.get(url + `/api/v1/auth/users`, {
+    const respo = await axios.get(url + `/api/v1/auth/users`, {
       headers: {
         Authorization: "Bearer " + token,
       },
     });
-    return response.data;
+    return respo.data;
   },
   onSuccess: (data) => {
-    console.log("users fetch", response.data);
+    console.log("users fetch", respo.data);
   },
 });
 

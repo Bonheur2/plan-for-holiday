@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import "./Dashboard.css";
 import { FiSun } from "react-icons/fi";
-import { MdDashboard, MdDarkMode } from "react-icons/md";
+import { MdDashboard, MdDarkMode, MdMessage } from "react-icons/md";
 import { PiAirplaneTiltFill } from "react-icons/pi";
 import { FaUsersCog, FaChartBar } from "react-icons/fa";
-import { AiFillSetting } from "react-icons/ai";
 import { Link, Outlet } from "react-router-dom";
 import bonheur from "/images/bonheur.jpg";
 import { AuthContext } from "../../context/AppProvider";
@@ -68,7 +67,7 @@ function Dashboard() {
             <li>
               <Link to="/dashboard/message">
                 <i>
-                  <AiFillSetting />
+                  <MdMessage />
                 </i>
                 <span> Message</span>
               </Link>

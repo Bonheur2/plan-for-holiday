@@ -85,6 +85,24 @@ function Users() {
     setaddUser(true);
   }
 
+
+  //add user 
+
+  const handleadduser = async (e) => {
+    e.preventDefault();
+  
+    try {
+      await axios.post(
+        "https://holiday-planner-4lnj.onrender.com/api/v1/auth/signup",
+        formdata
+      );
+      console.log(formdata);
+      Navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       {addUser && (
@@ -93,18 +111,26 @@ function Users() {
             <nav>
               <GiCancel onClick={NewUsers} className="cancel-btn" />
             </nav>
-            <form action="" className="reg-form1">
+            <form action="" className="reg-form1" onSubmit={handleadduser}>
               <label htmlFor="">Fullname</label>
-              <input type="text" placeholder="Enter your fullname" />
+              <input type="text"
+                onChange={(e) => setFullName(e.target.value)}
+                placeholder="Enter your fullname" />
 
               <label htmlFor="">Email</label>
-              <input type="email" placeholder="Enter your Email" />
+              <input type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your Email" />
 
               <label htmlFor="">Password</label>
-              <input type="password" placeholder="Enter your password" />
+              <input type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password" />
 
               <label htmlFor="">Country</label>
-              <input type="text" placeholder="Enter your country" />
+              <input type="text"
+                onChange={(e) => setLocation(e.target.value)}
+                placeholder="Enter your country" />
 
               <input type="submit" value="Add User" />
             </form>
@@ -113,9 +139,9 @@ function Users() {
         </div>
       )}
       <div className="user-container">
-        <nav className="add-user-btn" onClick={NewUsers}>
+        {/* <nav className="add-user-btn" onClick={NewUsers}>
           Add User
-        </nav>
+        </nav> */}
         <table className="user-table">
           <thead>
             <tr className="mytheader">

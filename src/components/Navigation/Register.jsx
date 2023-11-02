@@ -12,7 +12,7 @@ import Notiflix from "notiflix";
 
 Notiflix.Notify.init({
   position: "righf-top",
-  timeout: 3000,
+  timeout: 4000,
   cssAnimation: true,
 })
 function Register() {
@@ -32,9 +32,7 @@ function Register() {
     e.preventDefault();
 
   if (password !== confirmPassword) {
-    // alert("Passwords do not match");
     Notiflix.Notify.failure("Password not match!");
-
     return;
   }
 
