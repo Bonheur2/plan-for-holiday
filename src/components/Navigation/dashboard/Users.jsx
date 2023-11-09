@@ -8,6 +8,7 @@ import { useEffect, useContext } from "react";
 import { AuthContext } from "../../../context/AppProvider";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa";
+import ReactPaginate from "react-paginate";
 
 
 Modal.setAppElement("#root");
@@ -90,7 +91,7 @@ function Users() {
 
   const handleadduser = async (e) => {
     e.preventDefault();
-  
+
     try {
       await axios.post(
         "https://holiday-planner-4lnj.onrender.com/api/v1/auth/signup",
@@ -102,6 +103,35 @@ function Users() {
       console.log(error);
     }
   };
+  // pagination  
+
+
+  const [pageNumber, setPageNumber] = useState(0);
+  const userPerPage = 7;
+  const visitedPage = pageNumber * userPerPage;
+
+  const DisplayUser = fetchUsersData?.slice(visitedPage, visitedPage + userPerPage)
+    .map((user) => (
+      <tr key={user._id}>
+        <td>{user.fullName}</td>
+        <td>{user.email}</td>
+        <td>{user.role}</td>
+        <td>{user.location}</td>
+        <td className="editdelete">
+          <button
+            className="delete"
+            onClick={() => handleDelete(user._id)}
+          >
+            <FaTrash />
+          </button>
+        </td>
+      </tr>
+    ))
+  const pageCount = Math.ceil(fetchUsersData?.length / userPerPage)
+  const changepage = ({ selected }) => {
+    setPageNumber(selected);
+  }
+
 
   return (
     <>
@@ -153,24 +183,21 @@ function Users() {
             </tr>
           </thead>
           <tbody>
-            {fetchUsersData?.map((user) => (
-              <tr key={user._id}>
-                <td>{user.fullName}</td>
-                <td>{user.email}</td>
-                <td>{user.role}</td>
-                <td>{user.location}</td>
-                <td className="editdelete">
-                  <button
-                    className="delete"
-                    onClick={() => handleDelete(user._id)}
-                  >
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {/* {fetchUsersData? */}
+            {DisplayUser}
           </tbody>
         </table>
+        <ReactPaginate
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          pageCount={pageCount}
+          onPageChange={changepage}
+          containerClassName={"paginationBtn"}
+          previousLinkClassName={"previousBtn"}
+          nextLinkClassName={"nextBtn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
       </div>
       <EditUserForm
         isOpen={isEditModalOpen}

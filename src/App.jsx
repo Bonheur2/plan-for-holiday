@@ -17,6 +17,7 @@ import Tourdash from "./components/Navigation/dashboard/Tourdash";
 import Booking from "./components/Navigation/Booking";
 import BarChart from "./components/Navigation/dashboard/MYchart";
 import Message from "./components/Navigation/Message";
+import ProdectedRoute from "./components/Navigation/dashboard/ProdectedRoute";
 
 const Layout = () => {
   return (
@@ -30,7 +31,9 @@ const Layout = () => {
 const Dash = () => {
   return (
     <div>
+      <ProdectedRoute>
       <Dashboard />
+      </ProdectedRoute>
     </div>
   );
 };

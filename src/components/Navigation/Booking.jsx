@@ -1,8 +1,30 @@
 import React from 'react'
+import { useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from "../../context/AppProvider";
+import ReactPaginate from "react-paginate";
 function Booking() {
   const { fetchBook } = useContext(AuthContext);
+
+  // pagination 
+
+  const [pageNumber, setPageNumber] = useState(0);
+  const bookPerPage = 8;
+  const visitedPage = pageNumber * bookPerPage;
+
+  const DisplayBook = fetchBook?.slice(visitedPage, visitedPage + bookPerPage)
+    .map((item, index) => (
+      <tr key={item._id}>
+        <td>{item.tourID}</td>
+        <td>{item.userID}</td>
+        <td>{item.isPaid}</td>
+        <td>{item.paymentMethod}</td>
+      </tr>
+    ))
+    const pageCount = Math.ceil(fetchBook?.length / bookPerPage)
+    const changepage = ({ selected }) => {
+      setPageNumber(selected);
+    }
 
   return (
     <>
@@ -18,16 +40,20 @@ function Booking() {
             </tr>
           </thead>
           <tbody>
-            {fetchBook?.map((item, index) => (
-              <tr key={item._id}>
-                <td>{item.tourID}</td>
-                <td>{item.userID}</td>
-                <td>{item.isPaid}</td>
-                <td>{item.paymentMethod}</td>
-              </tr>
-            ))}
+            {DisplayBook}
           </tbody>
         </table>
+        <ReactPaginate
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          pageCount={pageCount}
+          onPageChange={changepage}
+          containerClassName={"paginationBtn"}
+          previousLinkClassName={"previousBtn"}
+          nextLinkClassName={"nextBtn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
       </div >
 
 

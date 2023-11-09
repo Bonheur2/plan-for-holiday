@@ -8,6 +8,7 @@ import TourModel from "./TourModal";
 import EditTourForm from "./EditTourForm";
 import Notiflix, { Report } from "notiflix";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import ReactPaginate from "react-paginate"
 
 function Tourdash() {
   // const tours = [
@@ -83,6 +84,47 @@ function Tourdash() {
     setAddTour(!addTour);
   }
 
+
+  // pagination
+
+  const [pageNumber, setPageNumber] = useState(0);
+  const tourPerPage = 4;
+  const visitedPage = pageNumber * tourPerPage;
+
+  const DisplayTour = myTours?.slice(visitedPage, visitedPage + tourPerPage)
+    .map((item, index) => (
+      <tr key={item._id}>
+        <td>
+          <img
+            src={item.backdropImage}
+            height={43}
+            width={63}
+            alt="IMAGES"
+          />
+        </td>
+        <td className="titledash">{item.Title}</td>
+        <td className="descriptiondash">{item.Description}</td>
+        <td className="pricedash">{item.Price}</td>
+        <td className="durationdash">{item.Duration}</td>
+        <td className="editdelete">
+
+          <button className="edit" onClick={() => EditMyForm(item)}>
+            <FaEdit />
+          </button>
+          <button
+            className="delete"
+            onClick={() => handleConfirmDelete(item._id)}
+          >
+            <FaTrash />
+          </button>
+        </td>
+      </tr>
+    ))
+  const pageCount = Math.ceil(myTours.length / tourPerPage)
+  const changepage = ({ selected }) => {
+    setPageNumber(selected);
+  }
+
   return (
     <>
       {addTour && <TourModel />}
@@ -108,36 +150,21 @@ function Tourdash() {
             </tr>
           </thead>
           <tbody>
-            {myTours?.map((item, index) => (
-              <tr key={item._id}>
-                <td>
-                  <img
-                    src={item.backdropImage}
-                    height={43}
-                    width={63}
-                    alt="IMAGES"
-                  />
-                </td>
-                <td className="titledash">{item.Title}</td>
-                <td className="descriptiondash">{item.Description}</td>
-                <td className="pricedash">{item.Price}</td>
-                <td className="durationdash">{item.Duration}</td>
-                <td className="editdelete">
-
-                  <button className="edit" onClick={() => EditMyForm(item)}>
-                    <FaEdit/>
-                  </button>
-                  <button
-                    className="delete"
-                    onClick={() => handleConfirmDelete(item._id)}
-                  >
-                    <FaTrash/>
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {/* {myTours? */}
+            {DisplayTour}
           </tbody>
         </table>
+        <ReactPaginate
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          pageCount={pageCount}
+          onPageChange={changepage}
+          containerClassName={"paginationBtn"}
+          previousLinkClassName={"previousBtn"}
+          nextLinkClassName={"nextBtn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
         {showDeleteConfirm && (
           <div className="popup">
             <p>Are you sure you want to delete {tourToDelete._id}?</p>

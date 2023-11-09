@@ -2,3 +2,26 @@
 {
 margin-bottom: 4rem;
 }
+.paginationBtn{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paginationBtn a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.paginationBtn a:hover
+{
+    background-color: rgb(56, 55, 55);
+    color: white;
+}
+.paginationActive a{
+    color: white;
+    background-color: black;
+}
