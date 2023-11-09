@@ -88,10 +88,10 @@ function Tourdash() {
   // pagination
 
   const [pageNumber, setPageNumber] = useState(0);
-  const tourPerPage = 4;
+  const tourPerPage = 5;
   const visitedPage = pageNumber * tourPerPage;
 
-  const DisplayTour = myTours?.slice(visitedPage, visitedPage + tourPerPage)
+  const DisplayTour = myTours.slice(visitedPage, visitedPage + tourPerPage)
     .map((item, index) => (
       <tr key={item._id}>
         <td>

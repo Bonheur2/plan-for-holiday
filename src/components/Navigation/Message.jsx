@@ -12,7 +12,7 @@ function Message() {
   const messagePerPage = 8;
   const visitedPage = pageNumber * messagePerPage;
 // console.log(fetchContact) ;
-  const DisplayMessage = fetchContact.slice(visitedPage, visitedPage + messagePerPage)
+  const DisplayMessage = fetchContact?.slice(visitedPage, visitedPage + messagePerPage)
     .map((item, index) => (
       <tr key={item._id}>
         <td>{item.name}</td>

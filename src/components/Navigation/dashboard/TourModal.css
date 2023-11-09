@@ -1,40 +1,39 @@
-.tour-container
-{
-padding: 1px 100px 0px 150px;
-height: 100vh;
-justify-content: center;
-align-items: center;
-display: flex;
-position: fixed;
-inset: 0;
-z-index: 5;
-
-background-color: rgba(65, 63, 63, 0.7);
+.tour-container {
+  padding: 1px 100px 0px 150px;
+  height: 102vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  background-color: rgba(65, 63, 63, 0.7);
 
 }
-.addtour-container
-{
+
+.addtour-container {
   background-color: white;
-  height: 92vh;
+  height: 95vh;
   margin-top: 25px;
 }
+
 .addtour-container label {
   padding: 10px 0;
   font-weight: bold;
 }
 
-.addtour-container nav{
+.addtour-container nav {
   display: flex;
   justify-content: center;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .addtour-container form input {
   width: 100%;
-  padding: 8px;
+  padding: 6px;
   background: none;
   color: black;
   outline: none;
@@ -43,6 +42,7 @@ background-color: rgba(65, 63, 63, 0.7);
   border-radius: 8px;
   border: 1px solid grey;
 }
+
 .createtourbtn {
   margin-top: 10px;
   background-color: #C29D59;
@@ -56,45 +56,45 @@ background-color: rgba(65, 63, 63, 0.7);
 }
 
 
- input
- {
+input {
   margin: auto;
- }
- .form-group
- {
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
-  /* gap: 12px; */
- }
- @media  (max-width: 768px){
-  .addtour-container
-  {
+}
+
+@media (max-width: 768px) {
+  .addtour-container {
     margin: 0;
     width: 100%;
     text-align: none;
     align-items: normal;
   }
-  .addtour-container label{
+
+  .addtour-container label {
     margin: 1px;
     padding: auto;
     text-align: none;
   }
-  
-.addtour-container form input {
-  width: 100%;
-  background: none;
-  color: black;
-  outline: none;
-  border-radius: 1px;
-  border: 1px solid grey;
+
+  .addtour-container form input {
+    width: 100%;
+    background: none;
+    color: black;
+    outline: none;
+    border-radius: 1px;
+    border: 1px solid grey;
+  }
+
+  input {
+    margin: 0;
+  }
+
+  .tour-container {
+    padding: 0;
+    margin: 0;
+  }
+
 }
-input
-{
-  margin: 0;
-}
-.tour-container{
-  padding: 0;
-  margin: 0;
-}
-  
- }
